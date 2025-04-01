@@ -1,4 +1,4 @@
-from .base_test_case import BaseTestCase
+from .base_test import BaseTestCase
 from .page_objects import Page
 
 

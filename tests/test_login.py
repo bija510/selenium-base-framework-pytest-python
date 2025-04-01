@@ -1,5 +1,5 @@
-from boilerplates.base_test_case import BaseTestCase
-from Pages.LoginPage import LoginPage as page
+from boilerplates.base_test import BaseTestCase
+from pages.login_page import LoginPage as page
 
 # chrome is the default browser if not specified.
 class LoginTest(BaseTestCase):
