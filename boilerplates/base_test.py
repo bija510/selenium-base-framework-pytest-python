@@ -1,5 +1,5 @@
 from seleniumbase import BaseCase
-
+from pages.login_page import LoginPage as page
 
 class BaseTestCase(BaseCase):
 
@@ -7,6 +7,8 @@ class BaseTestCase(BaseCase):
         super().setUp()
         # <<< Run custom code AFTER the super() line >>>
         self.open("https://opensource-demo.orangehrmlive.com/")
+        self.maximize_window()
+        self.login()
 
 
     def tearDown(self):
@@ -21,10 +23,17 @@ class BaseTestCase(BaseCase):
         # <<< Run custom code BEFORE the super() line >>>
         super().tearDown()
 
+
     def login(self):
         # <<< Placeholder. Add your code here. >>>
+        self.type(page.userName_txt, "Admin")
+        self.type(page.password_txt, "admin123")
+        self.click(page.login_btn)
+        print("------Login test executed-------")
+
         pass
 
     def example_method(self):
         # <<< Placeholder. Add your code here. >>>
+
         pass

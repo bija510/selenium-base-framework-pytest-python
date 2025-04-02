@@ -1,5 +1,5 @@
 
 class LoginPage(object):
-	userName_txt = "input#txtUsername"
-	password_txt = "input#txtPassword"
-	login_btn = "input#btnLogin"
+	userName_txt = "input[placeholder='Username']"
+	password_txt = "//input[@placeholder='Password']"
+	login_btn = "button[type='submit']"
